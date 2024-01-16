@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Formulario de Pago</title>
+  <!-- Agrega el enlace a Bootstrap si no lo estás utilizando directamente -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="mb-4">Formulario de Pago</h2>
+
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCardNumber">Número de Tarjeta</label>
+        <input type="text" class="form-control" id="inputCardNumber" placeholder="1234 5678 9012 3456" required>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="inputCVC">CVC</label>
+        <input type="number" class="form-control" id="inputCVC" placeholder="123" required>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="inputAmount">Cantidad de Dinero</label>
+        <input type="number" class="form-control" id="inputAmount" placeholder="$" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputFullName">Nombre y Apellidos</label>
+      <input type="text" class="form-control" id="inputFullName" placeholder="John Doe" required>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">Ciudad</label>
+        <input type="text" class="form-control" id="inputCity" required>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Estado</label>
+        <select id="inputState" class="form-control" required>
+          <option selected>Seleccionar...</option>
+          <option>Alabama</option>
+          <option>Alaska</option>
+          <!-- Agrega más estados según sea necesario -->
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Código Postal</label>
+        <input type="text" class="form-control" id="inputZip" pattern="[0-9]{5}" title="Debe contener 5 dígitos" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Forma de Pago</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+        <label class="form-check-label" for="creditCard">
+          Tarjeta de Crédito
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+        <label class="form-check-label" for="paypal">
+          PayPal
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputMessage">Mensaje</label>
+      <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Pagar</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
